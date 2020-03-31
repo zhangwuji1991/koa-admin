@@ -3,7 +3,8 @@ const {
     dbName,
     host,
     port,
-    user,password
+    user, 
+    password
 } = require('../config/config').database
 
 const sequelize = new Sequelize(dbName,user,password,{
@@ -24,7 +25,7 @@ const sequelize = new Sequelize(dbName,user,password,{
 })
 
 sequelize.sync({
-    force:true
+    force:false
 })
 
 module.exports = {

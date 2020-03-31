@@ -17,11 +17,15 @@ const catchError = async (ctx, next) => {
         //连接数据库 账号 密码 输错了
         //生产环境
         //开发环境 控制台打印错误
-        if(global.config.environment === 'dev'){
+        //开发环境 不是httpexception
+        const isHttpException = error instanceof HttpException
+        const isDew = global.config.environment === 'dev'
+
+        if (isDew && !isHttpException) {
             throw error
         }
 
-        if (error instanceof HttpException) {
+        if (isHttpException) {
             ctx.body = {
                 msg:error.msg,
                 error_code: error.errorCode,

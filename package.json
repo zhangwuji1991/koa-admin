@@ -11,6 +11,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "basic-auth": "^2.0.1",
+    "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.3.0",
@@ -22,6 +23,6 @@
     "npm-check": "^5.9.2",
     "require-directory": "^2.1.1",
     "sequelize": "^5.21.5",
-    "validator": "^13.0.0"
+    "validator": "^10.11.0"
   }
 }

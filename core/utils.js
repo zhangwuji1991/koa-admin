@@ -53,7 +53,8 @@ const generateToken = function (uid, scope) {
 
 
 
+
 module.exports = {
     findMembers,
-    generateToken,
+    generateToken
 }
